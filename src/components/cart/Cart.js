@@ -5,7 +5,7 @@ import { UserContext } from "../../App.js";
 import { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-// import prodlist from "../product/products.json"
+// import prodlist from "../product/products.json"    
 import "./Cart.css";
 import { Navigate } from "react-router-dom";
 export default function Cart() {
@@ -47,6 +47,7 @@ export default function Cart() {
           <div className="Cart-div-left">
             <table className="Cart-table">
               <tr>
+                <th></th>
                 <th>Item</th>
                 <th>Price</th>
                 <th>Quantity</th>
@@ -56,6 +57,7 @@ export default function Cart() {
                 if (cartItems[elem.id]) {
                   return (
                     <tr key={elem.id} ClassName="Cart-items">
+            
                       <td className="Cart-item-name">{elem.name}</td>
                       <td className="Cart-item-cells">₹{elem.price}</td>
                       <td className="Cart-item-buttons">
@@ -93,7 +95,7 @@ export default function Cart() {
             <div className="Cart-order-value">Order Value: ₹{orderValue}</div>
             <div className="Cart-order-value">
               <button onClick={submitOrder} className="Cart-place-order">
-                Submit Order
+                Proceed to Buy
               </button>
             </div>
           </div>
